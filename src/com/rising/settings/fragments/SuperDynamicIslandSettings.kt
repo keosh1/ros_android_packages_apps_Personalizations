@@ -16,10 +16,10 @@ import androidx.preference.Preference
 import androidx.preference.Preference.OnPreferenceChangeListener
 import androidx.preference.PreferenceCategory
 import androidx.preference.PreferenceScreen
-import androidx.preference.SwitchPreference
 
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent
 import com.android.settings.R
+import com.android.settings.preferences.SystemSettingSwitchPreference
 import com.android.settings.search.BaseSearchIndexProvider
 import com.rising.settings.fragments.OptimizedSettingsFragment
 import com.android.settingslib.search.SearchIndexable
@@ -67,17 +67,17 @@ class SuperDynamicIslandSettings : OptimizedSettingsFragment(), Preference.OnPre
         }
     }
 
-    private var masterToggle: SwitchPreference? = null
+    private var masterToggle: SystemSettingSwitchPreference? = null
     private var featuresCategory: PreferenceCategory? = null
     
     // Feature preferences
-    private var callsPreference: SwitchPreference? = null
-    private var timerPreference: SwitchPreference? = null
-    private var mediaPreference: SwitchPreference? = null
-    private var notificationsPreference: SwitchPreference? = null
-    private var recordingPreference: SwitchPreference? = null
-    private var faceIdPreference: SwitchPreference? = null
-    private var chargingPreference: SwitchPreference? = null
+    private var callsPreference: SystemSettingSwitchPreference? = null
+    private var timerPreference: SystemSettingSwitchPreference? = null
+    private var mediaPreference: SystemSettingSwitchPreference? = null
+    private var notificationsPreference: SystemSettingSwitchPreference? = null
+    private var recordingPreference: SystemSettingSwitchPreference? = null
+    private var faceIdPreference: SystemSettingSwitchPreference? = null
+    private var chargingPreference: SystemSettingSwitchPreference? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -97,7 +97,7 @@ class SuperDynamicIslandSettings : OptimizedSettingsFragment(), Preference.OnPre
      */
     private fun initializePreferences(prefScreen: PreferenceScreen, resolver: ContentResolver, resources: Resources) {
         // Master toggle
-        masterToggle = findPreference<SwitchPreference>(KEY_SDI_MASTER)?.apply {
+        masterToggle = findPreference<SystemSettingSwitchPreference>(KEY_SDI_MASTER)?.apply {
             onPreferenceChangeListener = this@SuperDynamicIslandSettings
             isChecked = Settings.System.getInt(resolver, KEY_SDI_MASTER, 0) == 1
         }
@@ -106,37 +106,37 @@ class SuperDynamicIslandSettings : OptimizedSettingsFragment(), Preference.OnPre
         featuresCategory = findPreference(KEY_CATEGORY_FEATURES)
 
         // Feature preferences
-        callsPreference = findPreference<SwitchPreference>(KEY_SDI_CALLS)?.apply {
+        callsPreference = findPreference<SystemSettingSwitchPreference>(KEY_SDI_CALLS)?.apply {
             onPreferenceChangeListener = this@SuperDynamicIslandSettings
             isChecked = Settings.System.getInt(resolver, KEY_SDI_CALLS, 1) == 1
         }
 
-        timerPreference = findPreference<SwitchPreference>(KEY_SDI_TIMER)?.apply {
+        timerPreference = findPreference<SystemSettingSwitchPreference>(KEY_SDI_TIMER)?.apply {
             onPreferenceChangeListener = this@SuperDynamicIslandSettings
             isChecked = Settings.System.getInt(resolver, KEY_SDI_TIMER, 1) == 1
         }
 
-        mediaPreference = findPreference<SwitchPreference>(KEY_SDI_MEDIA)?.apply {
+        mediaPreference = findPreference<SystemSettingSwitchPreference>(KEY_SDI_MEDIA)?.apply {
             onPreferenceChangeListener = this@SuperDynamicIslandSettings
             isChecked = Settings.System.getInt(resolver, KEY_SDI_MEDIA, 1) == 1
         }
 
-        notificationsPreference = findPreference<SwitchPreference>(KEY_SDI_NOTIFICATIONS)?.apply {
+        notificationsPreference = findPreference<SystemSettingSwitchPreference>(KEY_SDI_NOTIFICATIONS)?.apply {
             onPreferenceChangeListener = this@SuperDynamicIslandSettings
             isChecked = Settings.System.getInt(resolver, KEY_SDI_NOTIFICATIONS, 1) == 1
         }
 
-        recordingPreference = findPreference<SwitchPreference>(KEY_SDI_RECORDING)?.apply {
+        recordingPreference = findPreference<SystemSettingSwitchPreference>(KEY_SDI_RECORDING)?.apply {
             onPreferenceChangeListener = this@SuperDynamicIslandSettings
             isChecked = Settings.System.getInt(resolver, KEY_SDI_RECORDING, 1) == 1
         }
 
-        faceIdPreference = findPreference<SwitchPreference>(KEY_SDI_FACEID)?.apply {
+        faceIdPreference = findPreference<SystemSettingSwitchPreference>(KEY_SDI_FACEID)?.apply {
             onPreferenceChangeListener = this@SuperDynamicIslandSettings
             isChecked = Settings.System.getInt(resolver, KEY_SDI_FACEID, 1) == 1
         }
 
-        chargingPreference = findPreference<SwitchPreference>(KEY_SDI_CHARGING)?.apply {
+        chargingPreference = findPreference<SystemSettingSwitchPreference>(KEY_SDI_CHARGING)?.apply {
             onPreferenceChangeListener = this@SuperDynamicIslandSettings
             isChecked = Settings.System.getInt(resolver, KEY_SDI_CHARGING, 1) == 1
         }
