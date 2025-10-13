@@ -265,6 +265,150 @@
     <string name="notifications_island_notification_title">Island notification</string>
     <string name="notifications_island_notification_summary">Display heads-up notification in IOS \'Dynamic Island\' style</string>
 
+    <!-- Super Dynamic Island Settings Strings -->
+    <string name="sdi_settings_title">Super Dynamic Island</string>
+    <string name="sdi_settings_summary">Advanced notification and interaction system</string>
+    <string name="sdi_settings_master_toggle">Enable Super Dynamic Island</string>
+    <string name="sdi_settings_master_summary">Show notifications and controls in Dynamic Island</string>
+    
+    <!-- Categories -->
+    <string name="sdi_settings_features_title">Features</string>
+    <string name="sdi_settings_animations">Animations</string>
+    <string name="sdi_settings_advanced">Advanced</string>
+    
+    <!-- Feature Settings -->
+    <string name="sdi_settings_calls">Phone Calls</string>
+    <string name="sdi_settings_calls_summary">Show incoming, outgoing, and active calls</string>
+    <string name="sdi_settings_timer">Timer</string>
+    <string name="sdi_settings_timer_summary">Display timer notifications</string>
+    <string name="sdi_settings_media">Media Playback</string>
+    <string name="sdi_settings_media_summary">Show music and media controls</string>
+    <string name="sdi_settings_notifications">Notifications</string>
+    <string name="sdi_settings_notifications_summary">Display app notifications</string>
+    <string name="sdi_settings_recording">Recording</string>
+    <string name="sdi_settings_recording_summary">Show recording status</string>
+    <string name="sdi_settings_faceid">Face ID</string>
+    <string name="sdi_settings_faceid_summary">Display authentication prompts</string>
+    <string name="sdi_settings_charging">Charging</string>
+    <string name="sdi_settings_charging_summary">Show charging status and percentage</string>
+    
+    <!-- Animation Settings -->
+    <string name="sdi_settings_animation_speed">Animation Speed</string>
+    <string name="sdi_settings_animation_speed_summary">Control how fast animations play</string>
+    <string name="sdi_settings_animation_style">Animation Style</string>
+    <string name="sdi_settings_animation_style_summary">Choose animation behavior</string>
+    <string name="sdi_settings_haptic_feedback">Haptic Feedback</string>
+    <string name="sdi_settings_haptic_feedback_summary">Vibrate on interactions</string>
+    
+    <!-- Advanced Settings -->
+    <string name="sdi_settings_display_duration">Display Duration</string>
+    <string name="sdi_settings_display_duration_summary">How long notifications stay visible</string>
+    <string name="sdi_settings_auto_dismiss">Auto-dismiss</string>
+    <string name="sdi_settings_auto_dismiss_summary">Automatically hide after timeout</string>
+    <string name="sdi_settings_compatibility_mode">Compatibility Mode</string>
+    <string name="sdi_settings_compatibility_mode_summary">Enable for better stability with existing island</string>
+    
+    <!-- Units -->
+    <string name="sdi_settings_seconds">seconds</string>
+    
+    <!-- Animation Speed Options -->
+    <string-array name="sdi_animation_speed_entries">
+        <item>Slow</item>
+        <item>Normal</item>
+        <item>Fast</item>
+        <item>Very Fast</item>
+    </string-array>
+    
+    <string-array name="sdi_animation_speed_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    
+    <!-- Animation Style Options -->
+    <string-array name="sdi_animation_style_entries">
+        <item>Smooth</item>
+        <item>Bouncy</item>
+        <item>Sharp</item>
+        <item>Elastic</item>
+    </string-array>
+    
+    <string-array name="sdi_animation_style_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    
+    <!-- Footer -->
+    <string name="sdi_settings_footer_text">Super Dynamic Island provides an advanced notification system that works alongside the existing island implementation. All features can be individually controlled and the system includes comprehensive compatibility safeguards.</string>
+    
+    <!-- Status Messages -->
+    <string name="sdi_settings_status_enabled">Super Dynamic Island is enabled</string>
+    <string name="sdi_settings_status_disabled">Super Dynamic Island is disabled</string>
+    <string name="sdi_settings_status_error">Error: Super Dynamic Island unavailable</string>
+    
+    <!-- Compatibility Messages -->
+    <string name="sdi_settings_compatibility_warning">Compatibility mode is recommended if you experience conflicts with the existing island implementation</string>
+    <string name="sdi_settings_restart_required">Restart SystemUI to apply changes</string>
+    
+    <!-- Feature Descriptions -->
+    <string name="sdi_feature_calls_description">Handle incoming calls with answer/decline buttons, show outgoing call status, and display active call controls</string>
+    <string name="sdi_feature_timer_description">Show timer notifications with pause, resume, and stop controls</string>
+    <string name="sdi_feature_media_description">Display now playing information with play, pause, previous, and next controls</string>
+    <string name="sdi_feature_notifications_description">Show app notifications with expandable content and quick actions</string>
+    <string name="sdi_feature_recording_description">Display recording status for voice memos and screen recordings</string>
+    <string name="sdi_feature_faceid_description">Show Face ID authentication prompts and status</string>
+    <string name="sdi_feature_charging_description">Display charging status, percentage, and charging type indicators</string>
+
+    <!-- Animation Speed Options -->
+    <string name="sdi_animation_speed_slow">Slow</string>
+    <string name="sdi_animation_speed_normal">Normal</string>
+    <string name="sdi_animation_speed_fast">Fast</string>
+
+    <!-- Animation Style Options -->
+    <string name="sdi_animation_style_smooth">Smooth</string>
+    <string name="sdi_animation_style_bouncy">Bouncy</string>
+    <string name="sdi_animation_style_sharp">Sharp</string>
+
+    <!-- Animation Quality Options -->
+    <string name="sdi_animation_quality_low">Low</string>
+    <string name="sdi_animation_quality_medium">Medium</string>
+    <string name="sdi_animation_quality_high">High</string>
+
+    <!-- Content Descriptions and Accessibility -->
+    <string name="sdi_content_desc_avatar">Contact avatar</string>
+    <string name="sdi_content_desc_app_icon">App icon</string>
+    <string name="sdi_content_desc_media_artwork">Album artwork</string>
+    <string name="sdi_content_desc_charging_indicator">Charging indicator</string>
+    <string name="sdi_content_desc_faceid_icon">Face ID icon</string>
+    
+    <!-- Action Labels -->
+    <string name="sdi_action_tap">Tap to interact</string>
+    
+    <!-- Call States -->
+    <string name="sdi_call_incoming">Incoming Call...</string>
+    <string name="sdi_call_outgoing">Calling...</string>
+    <string name="sdi_call_end">End Call</string>
+    
+    <!-- Accessibility Labels -->
+    <string name="sdi_accessibility_call_answer">Answer call</string>
+    <string name="sdi_accessibility_call_decline">Decline call</string>
+    <string name="sdi_accessibility_timer_pause">Pause timer</string>
+    <string name="sdi_accessibility_timer_stop">Stop timer</string>
+    <string name="sdi_accessibility_media_previous">Previous track</string>
+    <string name="sdi_accessibility_media_pause">Pause playback</string>
+    <string name="sdi_accessibility_media_next">Next track</string>
+    <string name="sdi_accessibility_recording_stop">Stop recording</string>
+    
+    <!-- Status Labels -->
+    <string name="sdi_timer_label">TIMER</string>
+    <string name="sdi_notification_now">now</string>
+    <string name="sdi_charging_status">Charging</string>
+    <string name="sdi_faceid_scanning">Face ID Scanning...</string>
+    <string name="sdi_recording_voice_memo">Voice Memo</string>
+
     <!-- Hide NavBar space -->
     <string name="hide_ime_space_style_title">Hide NavBar space style</string>
     <string name="hide_ime_space_style_1">Narrow space</string>

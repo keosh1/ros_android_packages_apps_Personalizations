@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2024 risingOS Android Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:lineage="http://schemas.android.com/apk/res-auto"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    android:title="@string/sdi_settings_title">
+
+    <!-- Master Toggle -->
+    <com.android.settings.preferences.SystemSettingSwitchPreference
+        android:key="super_dynamic_island_enabled"
+        android:title="@string/sdi_settings_master_toggle"
+        android:summary="@string/sdi_settings_master_summary"
+        android:defaultValue="false"
+        lineage:position="top" />
+
+    <!-- Features Category -->
+    <PreferenceCategory
+        android:key="sdi_features_category"
+        android:title="@string/sdi_settings_features_title"
+        android:dependency="super_dynamic_island_enabled">
+
+        <!-- Phone Calls Feature -->
+        <com.android.settings.preferences.SystemSettingSwitchPreference
+            android:key="sdi_call_enabled"
+            android:title="@string/sdi_settings_calls"
+            android:summary="@string/sdi_settings_calls_summary"
+            android:defaultValue="true"
+            android:dependency="super_dynamic_island_enabled"
+            lineage:position="top" />
+
+        <!-- Timer Feature -->
+        <com.android.settings.preferences.SystemSettingSwitchPreference
+            android:key="sdi_timer_enabled"
+            android:title="@string/sdi_settings_timer"
+            android:summary="@string/sdi_settings_timer_summary"
+            android:defaultValue="true"
+            android:dependency="super_dynamic_island_enabled"
+            lineage:position="middle" />
+
+        <!-- Media Playback Feature -->
+        <com.android.settings.preferences.SystemSettingSwitchPreference
+            android:key="sdi_media_enabled"
+            android:title="@string/sdi_settings_media"
+            android:summary="@string/sdi_settings_media_summary"
+            android:defaultValue="true"
+            android:dependency="super_dynamic_island_enabled"
+            lineage:position="middle" />
+
+        <!-- Notifications Feature -->
+        <com.android.settings.preferences.SystemSettingSwitchPreference
+            android:key="sdi_notification_enabled"
+            android:title="@string/sdi_settings_notifications"
+            android:summary="@string/sdi_settings_notifications_summary"
+            android:defaultValue="true"
+            android:dependency="super_dynamic_island_enabled"
+            lineage:position="middle" />
+
+        <!-- Recording Feature -->
+        <com.android.settings.preferences.SystemSettingSwitchPreference
+            android:key="sdi_recording_enabled"
+            android:title="@string/sdi_settings_recording"
+            android:summary="@string/sdi_settings_recording_summary"
+            android:defaultValue="true"
+            android:dependency="super_dynamic_island_enabled"
+            lineage:position="middle" />
+
+        <!-- Face ID Feature -->
+        <com.android.settings.preferences.SystemSettingSwitchPreference
+            android:key="sdi_faceid_enabled"
+            android:title="@string/sdi_settings_faceid"
+            android:summary="@string/sdi_settings_faceid_summary"
+            android:defaultValue="true"
+            android:dependency="super_dynamic_island_enabled"
+            lineage:position="middle" />
+
+        <!-- Charging Feature -->
+        <com.android.settings.preferences.SystemSettingSwitchPreference
+            android:key="sdi_charging_enabled"
+            android:title="@string/sdi_settings_charging"
+            android:summary="@string/sdi_settings_charging_summary"
+            android:defaultValue="true"
+            android:dependency="super_dynamic_island_enabled"
+            lineage:position="bottom" />
+
+    </PreferenceCategory>
+
+    <!-- Animation Settings Category -->
+    <PreferenceCategory
+        android:key="sdi_animations_category"
+        android:title="@string/sdi_settings_animations"
+        android:dependency="super_dynamic_island_enabled">
+
+        <!-- Animation Speed -->
+        <com.android.settings.preferences.SystemSettingListPreference
+            android:key="sdi_animation_speed"
+            android:title="@string/sdi_settings_animation_speed"
+            android:summary="@string/sdi_settings_animation_speed_summary"
+            android:entries="@array/sdi_animation_speed_entries"
+            android:entryValues="@array/sdi_animation_speed_values"
+            android:defaultValue="1"
+            android:dependency="super_dynamic_island_enabled"
+            lineage:position="top" />
+
+        <!-- Animation Style -->
+        <com.android.settings.preferences.SystemSettingListPreference
+            android:key="sdi_animation_style"
+            android:title="@string/sdi_settings_animation_style"
+            android:summary="@string/sdi_settings_animation_style_summary"
+            android:entries="@array/sdi_animation_style_entries"
+            android:entryValues="@array/sdi_animation_style_values"
+            android:defaultValue="0"
+            android:dependency="super_dynamic_island_enabled"
+            lineage:position="middle" />
+
+        <!-- Haptic Feedback -->
+        <com.android.settings.preferences.SystemSettingSwitchPreference
+            android:key="sdi_haptic_feedback"
+            android:title="@string/sdi_settings_haptic_feedback"
+            android:summary="@string/sdi_settings_haptic_feedback_summary"
+            android:defaultValue="true"
+            android:dependency="super_dynamic_island_enabled"
+            lineage:position="bottom" />
+
+    </PreferenceCategory>
+
+    <!-- Advanced Settings Category -->
+    <PreferenceCategory
+        android:key="sdi_advanced_category"
+        android:title="@string/sdi_settings_advanced"
+        android:dependency="super_dynamic_island_enabled">
+
+        <!-- Display Duration -->
+        <com.android.settings.preferences.SystemSettingSeekBarPreference
+            android:key="sdi_display_duration"
+            android:title="@string/sdi_settings_display_duration"
+            android:summary="@string/sdi_settings_display_duration_summary"
+            android:max="10"
+            android:min="1"
+            android:defaultValue="3"
+            android:dependency="super_dynamic_island_enabled"
+            settings:units="@string/sdi_settings_seconds"
+            lineage:position="top" />
+
+        <!-- Auto-dismiss -->
+        <com.android.settings.preferences.SystemSettingSwitchPreference
+            android:key="sdi_auto_dismiss"
+            android:title="@string/sdi_settings_auto_dismiss"
+            android:summary="@string/sdi_settings_auto_dismiss_summary"
+            android:defaultValue="true"
+            android:dependency="super_dynamic_island_enabled"
+            lineage:position="middle" />
+
+        <!-- Compatibility Mode -->
+        <com.android.settings.preferences.SystemSettingSwitchPreference
+            android:key="sdi_compatibility_mode"
+            android:title="@string/sdi_settings_compatibility_mode"
+            android:summary="@string/sdi_settings_compatibility_mode_summary"
+            android:defaultValue="false"
+            android:dependency="super_dynamic_island_enabled"
+            lineage:position="bottom" />
+
+    </PreferenceCategory>
+
+    <!-- Footer Information -->
+    <com.android.settingslib.widget.FooterPreference
+        android:key="sdi_footer"
+        android:title="@string/sdi_settings_footer_text"
+        android:selectable="false"
+        settings:searchable="false" />
+
+</PreferenceScreen>

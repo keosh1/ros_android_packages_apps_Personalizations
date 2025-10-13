@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2024 risingOS Android Project
+  ~ SPDX-License-Identifier: Apache-2.0
+  -->
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:title="@string/sdi_settings_animations">
+
+    <!-- Animation Preview -->
+    <com.android.settings.preferences.ui.AdaptivePreference
+        android:key="sdi_animation_preview"
+        android:title="Preview Animations"
+        android:summary="Tap to preview current animation settings"
+        android:icon="@drawable/ic_play_circle_outline"
+        app:allowDividerAbove="false"
+        app:allowDividerBelow="true" />
+
+    <!-- Basic Animation Settings -->
+    <PreferenceCategory
+        android:title="Basic Settings"
+        android:key="sdi_animation_basic">
+
+        <ListPreference
+            android:key="sdi_animation_speed"
+            android:title="@string/sdi_settings_animation_speed"
+            android:summary="@string/sdi_settings_animation_speed_summary"
+            android:icon="@drawable/ic_speed"
+            android:entries="@array/sdi_animation_speed_entries"
+            android:entryValues="@array/sdi_animation_speed_values"
+            android:defaultValue="1" />
+
+        <ListPreference
+            android:key="sdi_animation_style"
+            android:title="@string/sdi_settings_animation_style"
+            android:summary="@string/sdi_settings_animation_style_summary"
+            android:icon="@drawable/ic_animation"
+            android:entries="@array/sdi_animation_style_entries"
+            android:entryValues="@array/sdi_animation_style_values"
+            android:defaultValue="0" />
+
+        <SwitchPreference
+            android:key="sdi_haptic_feedback"
+            android:title="@string/sdi_settings_haptic_feedback"
+            android:summary="@string/sdi_settings_haptic_feedback_summary"
+            android:icon="@drawable/ic_vibration"
+            android:defaultValue="true" />
+
+    </PreferenceCategory>
+
+    <!-- Advanced Animation Settings -->
+    <PreferenceCategory
+        android:title="Advanced Settings"
+        android:key="sdi_animation_advanced">
+
+        <Preference
+            android:key="sdi_custom_duration"
+            android:title="Custom Duration"
+            android:summary="400ms"
+            android:icon="@drawable/ic_timer"
+            android:selectable="true" />
+
+        <Preference
+            android:key="sdi_bounce_intensity"
+            android:title="Bounce Intensity"
+            android:summary="50%"
+            android:icon="@drawable/ic_bounce"
+            android:selectable="true"
+            android:dependency="sdi_animation_style" />
+
+        <SwitchPreference
+            android:key="sdi_fade_transitions"
+            android:title="Fade Transitions"
+            android:summary="Enable smooth fade effects between states"
+            android:icon="@drawable/ic_fade"
+            android:defaultValue="true" />
+
+        <SwitchPreference
+            android:key="sdi_scale_animations"
+            android:title="Scale Animations"
+            android:summary="Enable scaling effects during transitions"
+            android:icon="@drawable/ic_scale"
+            android:defaultValue="true" />
+
+        <SwitchPreference
+            android:key="sdi_rotation_effects"
+            android:title="Rotation Effects"
+            android:summary="Add subtle rotation to certain animations"
+            android:icon="@drawable/ic_rotate"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="sdi_parallax_effects"
+            android:title="Parallax Effects"
+            android:summary="Enable depth-based motion effects"
+            android:icon="@drawable/ic_parallax"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
+
+    <!-- Performance Settings -->
+    <PreferenceCategory
+        android:title="Performance"
+        android:key="sdi_animation_performance">
+
+        <SwitchPreference
+            android:key="sdi_reduce_animations_low_battery"
+            android:title="Reduce Animations on Low Battery"
+            android:summary="Automatically reduce animation complexity when battery is low"
+            android:icon="@drawable/ic_battery_saver"
+            android:defaultValue="true" />
+
+        <SwitchPreference
+            android:key="sdi_disable_animations_power_save"
+            android:title="Disable Animations in Power Save Mode"
+            android:summary="Turn off animations when power save mode is active"
+            android:icon="@drawable/ic_power_save"
+            android:defaultValue="false" />
+
+        <ListPreference
+            android:key="sdi_animation_quality"
+            android:title="Animation Quality"
+            android:summary="Balance between visual quality and performance"
+            android:icon="@drawable/ic_quality"
+            android:entries="@array/sdi_animation_quality_entries"
+            android:entryValues="@array/sdi_animation_quality_values"
+            android:defaultValue="1" />
+
+    </PreferenceCategory>
+
+    <!-- Reset Settings -->
+    <PreferenceCategory
+        android:title="Reset"
+        android:key="sdi_animation_reset">
+
+        <Preference
+            android:key="sdi_reset_animation_settings"
+            android:title="Reset Animation Settings"
+            android:summary="Restore all animation settings to default values"
+            android:icon="@drawable/ic_restore"
+            android:selectable="true" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
