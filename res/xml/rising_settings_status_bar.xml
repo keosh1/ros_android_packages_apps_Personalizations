@@ -209,6 +209,13 @@
             lineage:isLineageSettings="true"
             lineage:position="top" />
 
+        <!-- Super Dynamic Island -->
+        <com.android.settings.preferences.ui.AdaptivePreference
+            android:key="super_dynamic_island"
+            android:title="@string/sdi_settings_title"
+            android:summary="@string/sdi_settings_summary"
+            android:fragment="com.rising.settings.fragments.SuperDynamicIslandSettings" />
+
         <com.android.settings.preferences.SystemSettingSwitchPreference
             android:key="status_bar_brightness_control"
             android:title="@string/status_bar_toggle_brightness_title"

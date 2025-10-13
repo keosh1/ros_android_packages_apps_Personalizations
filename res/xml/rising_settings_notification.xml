@@ -87,14 +87,7 @@
             android:key="island_notification"
             android:title="@string/notifications_island_notification_title"
             android:summary="@string/notifications_island_notification_summary"
-            android:fragment="com.rising.settings.fragments.IslandSettings" />
-
-        <!-- Super Dynamic Island -->
-        <com.android.settings.preferences.ui.AdaptivePreference
-            android:key="super_dynamic_island"
-            android:title="@string/sdi_settings_title"
-            android:summary="@string/sdi_settings_summary"
-            android:fragment="com.rising.settings.fragments.SuperDynamicIslandSettings"
+            android:fragment="com.rising.settings.fragments.IslandSettings"
             lineage:position="bottom" />
 
     </PreferenceCategory>
